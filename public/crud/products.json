@@ -1,0 +1,80 @@
+{
+  "fields": [
+    {
+      "name": "category_id",
+      "type": "select",
+      "options": {
+        "gourmetc": "Gourmet Coffee",
+        "hbgsh": "House Blend Grande Served Hot",
+        "hbgsc": "House Blend Grande Served Chill",
+        "tf": "The Frappes",
+        "gts": "Gourmet Tea Selection",
+        "ff": "Fruits Freeze",
+        "psc": "Pasta, Sandwich, & Companion"
+      }
+    },
+    {
+      "name": "product_name",
+      "type": "string"
+    },
+    {
+      "name": "product_description",
+      "type": "text"
+    },
+    {
+      "name": "product_price",
+      "type": "integer"
+    },
+    {
+      "name": "file_name",
+      "type": "string"
+    }
+  ],
+  "foreign_keys": [
+    {
+      "column": "category_id",
+      "references": "id",
+      "on": "categories",
+      "onDelete": "cascade"
+    }
+  ],
+  "relationships": [
+    {
+      "name": "category",
+      "type": "belongsTo",
+      "class": "App\\Category"
+    },
+    {
+      "name": "image",
+      "type": "hasMany",
+      "class": "App\\Image"
+    },
+    {
+      "name": "reviews",
+      "type": "hasMany",
+      "class": "App\\Review"
+    },
+  ],
+  "validations": [
+    {
+      "field": "product_name",
+      "rules": "required"
+    },
+    {
+      "field": "file_name",
+      "rules": "required"
+    },
+    {
+      "field": "product_price",
+      "rules": "required"
+    },
+    {
+      "field": "category_id",
+      "rules": "required"
+    },
+    {
+      "field": "product_description",
+      "rules": "required"
+    }
+  ]
+}

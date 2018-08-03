@@ -1,0 +1,41 @@
+{
+  "fields": [
+    {
+      "name": "name",
+      "type": "string"
+    },
+    {
+      "name": "address",
+      "type": "string"
+    },
+    {
+      "name": "email",
+      "type": "string"
+    },
+    {
+      "name": "password",
+      "type": "string"
+    },
+    {
+      "name": "isAdmin",
+      "type": "tinyint"
+    }
+  ],
+  "relationships": [
+
+  ],
+  "validations": [
+    {
+      "field": "name",
+      "rules": "required"
+    },
+    {
+      "field": "email",
+      "rules": "required"
+    },
+    {
+      "field": "password",
+      "rules": "required"
+    }
+  ]
+}

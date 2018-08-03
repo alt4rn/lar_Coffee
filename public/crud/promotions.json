@@ -1,0 +1,56 @@
+{
+  "fields": [
+    {
+      "name": "title",
+      "type": "string"
+    },
+    {
+      "name": "description",
+      "type": "text"
+    },
+    {
+      "name": "starting_date",
+      "type": "datetime"
+    },
+    {
+      "name": "end_date",
+      "type": "datetime"
+    },
+    {
+      "name": "minimum_payment",
+      "type": "integer"
+    },
+    {
+      "name": "discount",
+      "type": "double"
+    }
+  ],
+  "relationships": [
+  ],
+  "validations": [
+    {
+      "field": "title",
+      "rules": "required"
+    },
+    {
+      "field": "description",
+      "rules": "required"
+    },
+    {
+      "field": "starting_date",
+      "rules": "required"
+    },
+    {
+      "field": "end_date",
+      "rules": "required"
+    },
+    {
+      "field": "minimum_payment",
+      "rules": "required"
+    },
+    {
+      "field": "discount",
+      "rules": "required"
+    }
+  ]
+}
